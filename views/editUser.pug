@@ -1,0 +1,21 @@
+html 
+    head 
+        title Edit User
+    body 
+        h1 Edit User 
+        form(class='form' id='form' method='POST' action=`/users/${uid}`)
+            div     
+                label(for='Username') Username: 
+                input(id='username', name='username' value=`${username}`)
+            div     
+                label(for='name') Name:
+                input(id='name', name='name' value=`${name}`)
+            div     
+                label(for='email') Email:
+                input(id='email', name='email' value=`${email}`)
+            div     
+                label(for='age') Age:
+                input(id='age', name='age' value=`${age}`)
+            div 
+                input(type='submit' value='Edit User' )
+            a(href='/users') Cancel

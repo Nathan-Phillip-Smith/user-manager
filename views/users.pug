@@ -1,0 +1,24 @@
+html 
+    head 
+        title Current Users
+    body 
+        h1 Users 
+        table 
+            tr 
+                th Username
+                th Name
+                th Email
+                th Age
+                th 
+                th 
+            each user in users
+                tr(id=user.uid) 
+                    th=user.username
+                    th=user.name
+                    th=user.email
+                    th=user.age
+                    th 
+                        a(href='/editUser/'+user.username+'/'+user.name+'/'+user.email+'/'+user.age+'/'+user.uid) Edit
+                    th 
+                        a(href='/users/'+user.uid) Delete
+            a(href='/') add new user
